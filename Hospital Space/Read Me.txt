@@ -1,0 +1,40 @@
+How to run the Hospital Management System (HMS) Project
+1. Download the  zip file
+
+2. Extract the file and copy hospital folder
+
+3.Paste inside root directory(for xampp xampp/htdocs, for wamp wamp/www, for lamp var/www/html)
+
+4. Open PHPMyAdmin (http://localhost/phpmyadmin)
+
+5. Create a database with name hms
+
+6. Import hms.sql file(given inside the zip package in SQL file folder)
+
+7.Run the script http://localhost/hospital (frontend)
+
+Login Details
+Login Details for admin : admin/Test@12345
+Login Details for Patient: test@gmail.com/Test@123
+Login Details for Doctor: test@demo.com/Test@123
+
+<div class="col-sm-4">
+									<div class="panel panel-white no-radius text-center">
+										<div class="panel-body">
+											<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-smile-o fa-stack-1x fa-inverse"></i> </span>
+											<h2 class="StepTitle">Manage Patients</h2>
+											
+											<p class="links cl-effect-1">
+												<a href="manage-patient.php">
+<?php $result = mysqli_query($con,"SELECT * FROM tblpatient ");
+$num_rows = mysqli_num_rows($result);
+{
+?>
+Total Patients :<?php echo htmlentities($num_rows);  
+} ?>		
+</a>
+											</p>
+										</div>
+									</div>
+								</div>
+
